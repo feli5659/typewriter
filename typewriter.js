@@ -16,13 +16,11 @@ function loop() {
   typewriterText = typewriter.textContent;
   let maxNumberOfItems = typewriterText.length;
 
-  iterator++;
-
-  if (iterator <= maxNumberOfItems) {
-    setTimeout(loop, 200);
-  }
-//   Array.from(typewriterText).forEach((letter, i) => {
-    
-//   });
-  console.log(typewriterText);
+  Array.from(typewriterText).forEach((letter, i) => {
+    iterator++;
+    if (iterator <= maxNumberOfItems) {
+      setTimeout(loop, 200);
+    }
+  });
+  console.log(Array.from(typewriterText));
 }
