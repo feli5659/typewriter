@@ -2,7 +2,7 @@
 
 let iterator = 0;
 let typewriterText;
-
+let letter;
 const typewriter = document.querySelector("#typewriter");
 typewriterText = typewriter.textContent;
 const maxNumberOfItems = typewriterText.length;
@@ -15,9 +15,13 @@ function initLoop() {
 }
 
 function loop() {
-  console.log("loop", typewriterText[iterator]);
   iterator++;
+  letter = "";
+
   if (iterator <= maxNumberOfItems) {
     setTimeout(loop, 200);
-  }
+    letter = typewriterText[iterator - 1];
+    typewriter.textContent += letter;
+  } 
+  console.log(letter);
 }
