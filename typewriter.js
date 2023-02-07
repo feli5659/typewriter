@@ -9,14 +9,6 @@ const maxNumberOfItems = typewriterText.length;
 // empties #typewriter content before the loop
 typewriter.textContent = "";
 
-// // Audio #typekey1
-// document.querySelector("#typekey1").volume = 1;
-// document.querySelector("#typekey1").currentTime = 0;
-// document.querySelector("#typekey1").play();
-// // Audio #typekey2
-// document.querySelector("#typekey2").volume = 1;
-// document.querySelector("#typekey2").currentTime = 0;
-// document.querySelector("#typekey2").play();
 
 initLoop();
 
