@@ -4,7 +4,9 @@ let iterator = 0;
 let typewriterText;
 
 const typewriter = document.querySelector("#typewriter");
-
+typewriterText = typewriter.textContent;
+const maxNumberOfItems = typewriterText.length;
+console.log(typewriterText);
 initLoop();
 
 function initLoop() {
@@ -13,14 +15,9 @@ function initLoop() {
 }
 
 function loop() {
-  typewriterText = typewriter.textContent;
-  let maxNumberOfItems = typewriterText.length;
-
-  Array.from(typewriterText).forEach((letter, i) => {
-    iterator++;
-    if (iterator <= maxNumberOfItems) {
-      setTimeout(loop, 200);
-    }
-  });
-  console.log(Array.from(typewriterText));
+  console.log("loop", typewriterText[iterator]);
+  iterator++;
+  if (iterator <= maxNumberOfItems) {
+    setTimeout(loop, 200);
+  }
 }
